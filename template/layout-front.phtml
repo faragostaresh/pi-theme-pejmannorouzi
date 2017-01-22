@@ -106,22 +106,20 @@ $breadcrumbs = $this->breadcrumb(
 <div class="pi-body">
     <div class="container">
         <div class="row">
-            <div class="clearfix">
-                <div class="text-center">
-                    <?php if ($module == 'system') { ?>
-                        <h1>
-                            <a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>">
-                                <?php echo _escape($sitename); ?>
-                            </a>
-                        </h1>
-                    <?php } else { ?>
-                        <h2>
-                            <a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>">
-                                <?php echo _escape($sitename); ?>
-                            </a>
-                        </h2>
-                    <?php } ?>
-                </div>
+            <div class="pi-body-title">
+                <?php if ($module == 'system') { ?>
+                    <h1>
+                        <a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>">
+                            <?php echo _escape($sitename); ?>
+                        </a>
+                    </h1>
+                <?php } else { ?>
+                    <h2>
+                        <a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>">
+                            <?php echo _escape($sitename); ?>
+                        </a>
+                    </h2>
+                <?php } ?>
             </div>
             <!-- Header: brand, slogan, user bar -->
             <header class="pi-header">

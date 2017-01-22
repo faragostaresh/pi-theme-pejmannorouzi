@@ -5,7 +5,6 @@ html {
 }
 
 body {
-    padding: 15px 0;
     background-color: #3C3C3C;
     color: #fff;
 }
@@ -332,6 +331,19 @@ form .icon-question-sign {
 .pi-body {
     color: #333;
 }
+
+.pi-body-title {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.pi-body-title h1,
+.pi-body-title h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 35px;
+}
+
 /* header */
 .pi-header {
     background-color: #F0F1F5;
@@ -343,13 +355,6 @@ form .icon-question-sign {
 
 .pi-header a {
     color: #333;
-}
-
-.pi-header h1,
-.pi-header h2 {
-    padding: 5px 0;
-    margin: 0;
-    font-size: 35px;
 }
 
 .pi-header .navbar-default {
@@ -393,10 +398,19 @@ form .icon-question-sign {
     margin-bottom: 15px;
 }
 
-
 /* footer */
 .pi-footer {
     background-color: #3C3C3C;
     color: #fff;
     padding: 15px 0;
+}
+
+/* breadcrumb */
+.breadcrumb {
+    background: inherit;
+    color: #fff;
+}
+
+.breadcrumb a {
+    color: #fff;
 }
