@@ -130,8 +130,15 @@ $breadcrumbs = $this->breadcrumb(
                         </button>
                     </div>
                     <div class="navbar-collapse collapse">
-                        <?php echo $navigation->menu()->setUlClass('nav navbar-nav pi-navbar-nav'); ?>
-                        <div class="navbar-form navbar-right">
+                        <ul class="nav navbar-nav pi-navbar-nav">
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>"><span class="pi-navbar-nav-icon"><i class="fa fa-home"></i></span><span class="pi-navbar-nav-text">خانه</span></a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/pad" title="دفترچه یادداشت"><span class="pi-navbar-nav-icon"><i class="fa fa-book"></i></span><span class="pi-navbar-nav-text">دفترچه یادداشت</span></a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/kiosk" title="کیوسک"><span class="pi-navbar-nav-icon"><i class="fa fa-newspaper-o"></i></span><span class="pi-navbar-nav-text">کیوسک</span></a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/together" title="با همدیگر"><span class="pi-navbar-nav-icon"><i class="fa fa-users"></i></span><span class="pi-navbar-nav-text">با همدیگر</span></a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/alarm-art" title="زنگ هنر"><span class="pi-navbar-nav-icon"><i class="fa fa-paint-brush"></i></span><span class="pi-navbar-nav-text">زنگ هنر</span></a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/working-time" title="وقت کار"><span class="pi-navbar-nav-icon"><i class="fa fa-briefcase"></i></span><span class="pi-navbar-nav-text">وقت کار</span></a></li>
+                        </ul>
+                        <div class="navbar-form navbar-right col-md-4">
                             <?php echo $this->widget('search-search'); ?>
                         </div>
                     </div>
@@ -148,7 +155,7 @@ $breadcrumbs = $this->breadcrumb(
             <!-- Page main content: breadcrumb, flash-messenger, blocks and module content -->
             <section class="pi-section">
                 <div class="pi-section-center clearfix">
-                    <div class="pi-side-container col-md-4">
+                    <div class="pi-side-container col-md-3">
                         <!-- Left zone -->
                         <?php if (!empty($blocks['1'])) { ?>
                             <div class="pi-zone-1">
@@ -166,7 +173,7 @@ $breadcrumbs = $this->breadcrumb(
                             </div>
                         <?php } ?>
                     </div>
-                    <div class="pi-main-container col-md-8">
+                    <div class="pi-main-container col-md-9">
                         <?php if ($breadcrumbs) { echo $breadcrumbs; } ?>
                         <!-- Flash messenger -->
                         <?php include $this->template('flash-messenger'); ?>
@@ -255,9 +262,77 @@ $breadcrumbs = $this->breadcrumb(
             </section>
             <!-- Footer: sitelink -->
             <footer class="pi-footer clearfix">
-                <div class="row">
-                    <div class="text-left col-md-6" data-rel="license">تمام حقوق مطالب برای <a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>"><?php echo _escape($sitename); ?></a> محفوظ است.</div>
-                    <div class="text-right col-md-6" data-rel="license">طراحی و توسعه <a title="فراگسترش" href="http://www.faragostaresh.com" target="_blank">فراگسترش</a></div>
+                <div class="pi-footer-body clearfix">
+                    <div class="col-md-3">
+                        <h4><a href="<?php echo Pi::url($this->url('home')); ?>news/pad" title="دفترچه یادداشت">دفترچه یادداشت</a></h4>
+                        <ul class="list-unstyled">
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/knowledge" title="دانش">دانش</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/social" title="اجتماعی">اجتماعی</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/popularization-of-science" title="ترویج علم">ترویج علم</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/dreams" title="خیالی ها">خیالی ها</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/literary-forum" title="ادبی ها">ادبی ها</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/trip" title="سفر">سفر</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/food" title="خوراکی">خوراکی</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/life-style" title="سبک زندگی">سبک زندگی</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/sporadic" title="پراکنده">پراکنده</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4><a href="<?php echo Pi::url($this->url('home')); ?>news/kiosk" title="کیوسک">کیوسک</a></h4>
+                        <ul class="list-unstyled pi-footer-list">
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/nojum" title="نجوم">نجوم</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/daneshmand" title="دانشمند">دانشمند</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/danestaniha" title="دانستنیها">دانستنیها</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/jamejam" title="جام جم">جام جم</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/other-magazines" title="سایر مجله ها">سایر مجله ها</a></li>
+                        </ul>
+                        <h4><a href="<?php echo Pi::url($this->url('home')); ?>news/together" title="با همدیگر">با همدیگر</a></h4>
+                        <ul class="list-unstyled">
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/lectures" title="سخنرانی ها">سخنرانی ها</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/events" title="رویدادها">رویدادها</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/generated-content" title="تولید محتوا">تولید محتوا</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4><a href="<?php echo Pi::url($this->url('home')); ?>news/alarm-art" title="زنگ هنر">زنگ هنر</a></h4>
+                        <ul class="list-unstyled pi-footer-list">
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/projects" title="پروژه ها">پروژه ها</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/paintings" title="نقاشی ها">نقاشی ها</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/memory-album" title="آلبوم خاطرات">آلبوم خاطرات</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/other-art-alarm" title="سایر">سایر</a></li>
+                        </ul>
+                        <h4><a href="<?php echo Pi::url($this->url('home')); ?>news/working-time" title="وقت کار">وقت کار</a></h4>
+                        <ul class="list-unstyled">
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/consultation" title="مشاوره">مشاوره</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/design" title="طراحی ها">طراحی ها</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>news/teaching" title="تدریس">تدریس</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4><a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>"><?php echo _escape($sitename); ?></a></h4>
+                        <ul class="list-unstyled pi-footer-list">
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>page/about-me" title="درباره من">درباره من</a></li>
+                            <li><a href="<?php echo Pi::url($this->url('home')); ?>contact" title="تماس با من">تماس با من</a></li>
+                        </ul>
+                        <div class="pi-social">
+                            <h4>شبکه های اجتماعی</h4>
+                            <ul class="list-inline">
+                                <li id="pi-social-twitter"><a title="تویتر" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li id="pi-social-facebook"><a title="فیسبوک" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li id="pi-social-pinterest"><a title="پین‌ترست" href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                <li id="pi-social-google"><a title="گوگل پلاس" href="#" target="_blank" rel="Publisher"><i class="fa fa-google-plus"></i></a></li>
+                                <li id="pi-social-instagram"><a title="اینستاگرام" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li id="pi-social-foursquare"><a title="Foursquare" href="#" target="_blank"><i class="fa fa-foursquare"></i></a></li>
+                                <li id="pi-social-linkedin"><a title="linkedin" href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pi-footer-copyright">
+                    <div class="row">
+                        <div class="text-left col-md-6" data-rel="license">تمام حقوق مطالب برای <a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>"><?php echo _escape($sitename); ?></a> محفوظ است.</div>
+                        <div class="text-right col-md-6" data-rel="license">طراحی و توسعه <a title="فراگسترش" href="http://www.faragostaresh.com" target="_blank">فراگسترش</a></div>
+                    </div>
                 </div>
             </footer>
         </div>

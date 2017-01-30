@@ -76,9 +76,12 @@ a:hover {
 
 .pi-block-title {
     padding: 10px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.pi-block-title h3 {
+.pi-block-title h2 {
     font-size: 1.2em;
     padding: 0;
     margin: 0;
@@ -368,6 +371,42 @@ form .icon-question-sign {
     color: #333;
 }
 
+@media (min-width: 768px) {
+    .pi-header .navbar-nav > li {
+        min-width: 120px !important;
+        text-align: center !important;
+        border-left: 1px solid #c8c8c8;
+    }
+
+    .pi-header .navbar-nav > li > a > .pi-navbar-nav-icon {
+        display: block;
+        padding: 4px;
+    }
+
+    .pi-header .navbar-nav > li > a > .pi-navbar-nav-icon  > i {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .pi-header .navbar-nav > li > a:hover > .pi-navbar-nav-icon  > i {
+        background-color: #707A94;
+        color: #fff;
+        border-radius: 50px;
+    }
+
+    .pi-header .navbar-nav > li > a > span {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .pi-header .search-block {
+        margin-top: 35px;
+    }
+}
+
 .pi-header .pi-header-block {
     background-color: #F0F1F5;
     color: #333;
@@ -399,10 +438,39 @@ form .icon-question-sign {
 }
 
 /* footer */
-.pi-footer {
+.pi-footer .pi-footer-body {
+    padding: 15px;
+    background-color: #F0F1F5;
+    color: #333;
+}
+
+.pi-footer .pi-footer-body a {
+    color: #333;
+}
+
+.pi-footer .pi-footer-body h4 {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #333;
+}
+
+.pi-footer .pi-footer-body .pi-footer-list {
+    min-height: 120px;
+}
+
+.pi-footer .pi-footer-body li {
+    padding: 3px 10px 3px 0;
+    font-size: 12px;
+}
+
+.pi-footer .pi-footer-copyright {
     background-color: #3C3C3C;
     color: #fff;
-    padding: 15px 0;
+    padding: 15px;
+}
+
+.pi-footer .pi-social i {
+    font-size: 16px;
 }
 
 /* breadcrumb */
@@ -413,4 +481,12 @@ form .icon-question-sign {
 
 .breadcrumb a {
     color: #fff;
+}
+
+/* modules and blocks */
+.news-microblog-post .single-post {
+    font-size: 12px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #333;
 }
