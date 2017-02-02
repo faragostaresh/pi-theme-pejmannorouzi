@@ -85,6 +85,10 @@ h5, h6 {
     }
 }
 
+.text-muted {
+    color: #f5f5f5;
+}
+
 /* Block */
 .pi-block {
     margin-bottom: 20px;
@@ -101,6 +105,17 @@ h5, h6 {
     font-size: 1.2em;
     padding: 0;
     margin: 0;
+}
+
+.pi-section-center .pi-side-container .pi-block-content img {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.pi-section-center .pi-main-container .pi-block-content img {
+    width: 100%;
+    height: 130px;
 }
 
 .pi-panel-subline {
@@ -499,10 +514,47 @@ form .icon-question-sign {
     color: #fff;
 }
 
+/* thumbnail */
+.pi-section-center .pi-side-container .thumbnail {
+    background-color: rgba(85, 92, 112, .7);
+    border: 1px solid rgba(85, 92, 112, .7);
+}
+
+.pi-section-center .pi-main-container .thumbnail {
+    background-color: rgba(0, 189, 189, .7);
+    border: 1px solid rgba(0, 189, 189, .7);
+}
+
+/* panel */
+.panel-default {
+    color: #333;
+}
+
+.panel-default a {
+    color: #333;
+}
+
 /* modules and blocks */
 .news-microblog-post .single-post {
     font-size: 12px;
     padding-bottom: 15px;
     margin-bottom: 5px;
     border-bottom: 1px dotted #333;
+}
+
+.news-microblog-post .single-post img {
+    width: 46px !important;
+    height: 46px !important;
+}
+
+.news-item-block-horizontal .news-item-block-horizontal-box {
+    text-align: center;
+}
+
+.news-item-block-horizontal .news-item-block-horizontal-box img {
+    margin-bottom: 10px;
+}
+
+.news-item-block-horizontal .news-item-block-horizontal-box h3 {
+    min-height: 70px;
 }

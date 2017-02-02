@@ -155,6 +155,8 @@ $breadcrumbs = $this->breadcrumb(
             <!-- Page main content: breadcrumb, flash-messenger, blocks and module content -->
             <section class="pi-section">
                 <div class="pi-section-center clearfix">
+                    <?php $piMainContaineClass = 'col-md-12'; ?>
+                    <?php if (isset($blocks['1']) || isset($blocks['8'])) { ?>
                     <div class="pi-side-container col-md-3">
                         <!-- Left zone -->
                         <?php if (!empty($blocks['1'])) { ?>
@@ -172,8 +174,10 @@ $breadcrumbs = $this->breadcrumb(
                                 } ?>
                             </div>
                         <?php } ?>
+                        <?php $piMainContaineClass = 'col-md-9'; ?>
                     </div>
-                    <div class="pi-main-container col-md-9">
+                    <?php } ?>
+                    <div class="pi-main-container <?php echo $piMainContaineClass; ?>">
                         <?php if ($breadcrumbs) { echo $breadcrumbs; } ?>
                         <!-- Flash messenger -->
                         <?php include $this->template('flash-messenger'); ?>
