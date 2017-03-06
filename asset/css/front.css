@@ -433,6 +433,12 @@ form .icon-question-sign {
         font-size: 14px;
     }
 
+    .pi-header .navbar-nav > li.active > a > .pi-navbar-nav-icon  > i {
+        background-color: #333;
+        color: #fff;
+        border-radius: 50px;
+    }
+
     .pi-header .search-block {
         margin-top: 35px;
     }
